@@ -9,7 +9,11 @@
 <body>
     <h3>
         <?php
-            $num1 = $_GET['num1'];
+
+      //  var_dump($_GET);
+        if (isset($_GET["num1"])) {
+            if (is_numeric($_GET["num1"])) {
+                $num1 = $_GET['num1'];
             $multiplicacion = 0;
 
             if ($num1>0&& $num1<11) {
@@ -20,6 +24,9 @@
             } else {
                 echo("Dime un número del 1 al 10");
             }
+            }
+        }
+            
             
         ?>
     </h3>
